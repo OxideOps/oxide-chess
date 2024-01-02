@@ -2,7 +2,7 @@ use std::{env, path::PathBuf};
 
 use super::command_config::CommandConfig;
 
-fn get_project_root() -> PathBuf {
+pub(super) fn get_project_root() -> PathBuf {
     PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap())
         .parent()
         .unwrap()

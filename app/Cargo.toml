@@ -45,6 +45,13 @@ bcrypt = "0.15.0"
 web-sys = "0.3.66"
 dioxus-router = { git = "https://github.com/OxideOps/dioxus.git" }
 
+[build-dependencies]
+anyhow = "1.0.77"
+color-thief = "0.2.2"
+image = "0.24.7"
+palette = "0.7.3"
+rgb = "0.8.37"
+
 [features]
 desktop = ["async-process", "async-std", "auto-deref", "dioxus-desktop", "num_cpus", "palette", "sys-info"]
 web = ["async-std", "auto-deref", "dioxus-web", "js-sys", "palette", "wasm-bindgen", "wasm-bindgen-futures", "web-sys/Storage"]

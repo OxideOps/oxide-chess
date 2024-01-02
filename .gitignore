@@ -6,3 +6,5 @@ dist
 app/styles/output.css
 app/node_modules
 .env
+complimentary-colors.txt
+

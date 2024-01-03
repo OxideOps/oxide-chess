@@ -4,6 +4,8 @@ mod auth;
 mod game_socket;
 #[cfg(feature = "ssr")]
 mod launcher;
+#[cfg(feature = "ssr")]
+mod mailer;
 pub(crate) mod server_functions;
 
 #[cfg(feature = "ssr")]

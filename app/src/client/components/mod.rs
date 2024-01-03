@@ -10,6 +10,7 @@ pub(super) mod nav_bar;
 mod piece;
 mod round_list;
 pub(super) mod settings;
+mod sign_up;
 mod timer;
 mod widget;
 
@@ -23,5 +24,6 @@ pub(super) use info_bar::InfoBar;
 pub(super) use piece::Piece;
 pub(super) use round_list::RoundList;
 pub(super) use settings::Settings;
+pub(super) use sign_up::SignUp;
 pub(super) use timer::Timer;
 pub(super) use widget::Widget;

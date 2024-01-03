@@ -44,6 +44,8 @@ palette = {  version = "0.7.3", optional = true }
 bcrypt = "0.15.0"
 web-sys = "0.3.66"
 dioxus-router = { git = "https://github.com/OxideOps/dioxus.git" }
+mailchecker = "6.0.1"
+lettre = { version = "0.11.2", optional = true }
 
 [features]
 desktop = ["async-process", "async-std", "auto-deref", "dioxus-desktop", "num_cpus", "palette", "sys-info"]
@@ -51,5 +53,6 @@ web = ["async-std", "auto-deref", "dioxus-web", "js-sys", "palette", "wasm-bindg
 ssr = [
     "tokio/full", "tower-http/fs", "tower",
     "dioxus-fullstack/axum", "axum",
-    "database"
+    "database",
+    "lettre/tokio1-native-tls",
 ]

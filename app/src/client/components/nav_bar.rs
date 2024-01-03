@@ -25,6 +25,13 @@ pub(crate) fn NavBar(cx: Scope) -> Element {
                             "Settings"
                         }
                     }
+                    li {
+                        Link {
+                            class: "nav-link",
+                            to: Route::SignUp {},
+                            "Sign Up"
+                        }
+                    }
                 }
             }
         }

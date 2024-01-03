@@ -1,13 +1,20 @@
 use dioxus_fullstack::prelude::*;
 
 #[server(CreateAccount, "/api")]
-pub async fn create_account(username: String, password: String) -> Result<(), ServerFnError> {
+pub async fn create_account(
+    username: String,
+    password: String,
+    email: String,
+) -> Result<(), ServerFnError> {
     use crate::server::auth;
 
     let hashed_password = auth::hash_password(&password).unwrap();
 
-    database::create_account(&username, &hashed_password).await?;
+    let account_id = database::create_account(&username, &hashed_password, &email).await?;
 
+    let _token = database::create_email_verification_token(account_id).await?;
+
+    //mailer::send_verification_email(&email, &token).await;
     Ok(())
 }
 
